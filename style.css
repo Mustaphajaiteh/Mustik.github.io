@@ -6,29 +6,28 @@
     font-family: 'Inter', 'sans-serif';
 }
 body{
-    background-color:#def4e4;
+    background-color:#ffffff;
 
-}
-div {
-    text-align: center;
 }
 
 section{
     background-color: white;
-    width: 95%;
+    width: 100%;
     height: 780px;
     font-family: 'Lucida Sans';
     margin: 20px auto;
     position: relative;
-    border-radius: 14pxS;
+    border-radius: 14px;
 }
 nav{
-    width: 220px;
+    width: 5%;
     height: 100%;
     background-color: #3f3d56;
     float: left;
-    mask-position: absolute;
+    transition: 0.3s ease in-out;
+    position: absolute;
 }
+
 ul{
     width: 100%;
     height: 100%;
@@ -46,7 +45,11 @@ li a{
     color: #ffffff;
 }
 main{
-    width: 85%;
+    width: 95%;
+    height: 100%;
+    padding: 10px 30px;
+    float: right;
+    background-color: aqua;
 }
 main header{
     display: flex;
@@ -56,3 +59,268 @@ main header a{
     padding: 0 5px;
     margin: 0 5px;
 }
+.toggle-nav{
+    position: absolute;
+    top: 10px;
+    left: 5%;
+
+}
+.checkbox-nav{
+    display: none;
+}
+ label .fa-times{
+    display: none;
+ }   
+   
+input.checkbox-nav:checked ~ nav{
+   width: 20%;
+}
+input.checkbox-nav:checked ~ label.toggle-nav{
+    left: 21%;
+ } 
+ input.checkbox-nav:checked ~ label .fa-times{
+    display: inline-block;
+ }
+ input.checkbox-nav:checked ~ label .fa-bars{
+    display: none;
+ }   
+
+
+ li a span {
+    font-size: 14px;
+    margin-left: 10px;
+    display: none;
+  }
+  input.checkbox-nav:checked ~  nav ul li a span {
+    display: inline-block;
+ }
+ /* div classes  */
+ .main-content{
+    width: 100%;
+    height: 80%;
+    /* float: right; */
+ }
+ .main-content .banner{
+     width: 98;
+     height: 90;
+     margin-top: 40px;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+ }
+ .main-content .banner .content,
+ .main-content .banner img{
+    width: 50%;
+ }
+ .main-content .banner img{
+    height: 90%;
+ }
+ 
+ .main-content .banner div h1{
+    font-size: 80px;
+ }
+ .main-content .banner h3,
+ .main-content .banner div h1 {
+    padding: 2px 0px 2px 50px;
+    color: #333;
+  }
+ .main-content .banner p{
+    line-height: 27px;
+    padding: 2px 0px 2px 50px;
+    text-align: justify;
+ }
+ .main-content > p{
+    text-align: center;
+    margin-top: 8rem;
+ }
+ .main-content .projects{
+    /* margin-left: 2rem; */
+  margin: 0 auto;
+  /* background-color: #fff; */
+  display: flex;
+  justify-content: center;
+  transition: .3s;
+  position: relative;
+  
+  
+  }
+  .round-ball{
+    position: absolute;
+  width: 175px;
+  height: 175px;
+  border-radius: 50%;
+  z-index: 0;
+  opacity: .5;
+  text-align: center;
+  
+  background-color: #1a9bbb96;
+  box-shadow: 0 0 20px 10px #79ece6a8;
+  
+  }
+  input.checkbox-theme:checked ~ section .round-ball{
+    background-color: #00bfa6;
+    box-shadow: 0 0 20px 10px #00bfa6;
+  }
+  .ball-1{
+    left: 50%;
+    bottom: 50%;
+  }
+  .ball-2{
+    right: 60%;
+    bottom: 80%;
+    width: 150px;
+    height: 150px;
+  }
+  .ball-3{
+    left: 90px;
+    bottom: 30%;
+  }
+  .ball-4{
+    right: 5%;
+    bottom: 10%;
+    width: 100%;
+    height: 100%;
+  }
+  .ball-5{
+    right: 50%;
+    bottom: 65%;
+  }
+  .ball-6{
+    left: 90px;
+    bottom: 50%;
+  }
+  .projects ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    z-index: 50;
+  }
+  .projects ul li{
+    width: 100%;
+    max-width: 300px;
+    height: 350px;
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
+    padding: 10px;
+    gap: 8px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+
+    backdrop-filter: blur(25px) saturate(182%);
+    -webkit-backdrop-filter: blur(25px) saturate(182%);
+    background-color: rgba(0, 218, 182, 0.07);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+  }
+  .projects ul li h3{
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+  .input .checkbox-theme:checked ~ section main li{
+    backdrop-filter: blur(19px) saturate(171%);
+    -webkit-backdrop-filter: blur(19px) saturate(171%);
+    background-color: rgba(38, 44, 51, 0.4);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+
+  }
+  .projects li .stacks{
+    display: flex;
+    gap: 10px;
+  }
+  .projects li .stacks i{
+    font-size: 40px;
+    width: 50px;
+  }
+  .projects .btns a{
+    width: 100%;
+  }
+  .projects .btns button{
+    width: 100%;
+    cursor: pointer;
+  }
+  .projects .btns{
+    display: flex;
+    width: 100%;
+    gap: 5px;
+  }
+  .projects .btns a button{
+    border-radius: 10px;
+    width: 100%;
+    border: none;
+    padding: 5px;
+    font-size: 20px;
+    font-weight: bolder;
+    color: #ffffff;
+    background-color: rgba(38, 44, 51, 0.5);
+    width: 100%;
+  }
+  @media (max-width: 768px) {
+    section {
+      width: 100%;
+      margin: 0;
+      border-radius: 0;
+    }
+    nav {
+      width: 0;
+      z-index: 1;
+      border-radius: 0;
+    }
+    input.checkbox-nav:checked ~ main {
+      width: 93%;
+    }
+
+    input.checkbox-nav:checked ~ nav {
+      width: 220px;
+      /* position: absolute; */
+      /* position:unset; */
+    }
+    input.checkbox-nav:checked ~ .toggle-nav {
+      left: 230px;
+    }
+
+    .main .banner {
+      flex-wrap: wrap;
+    }
+    .main .banner div,
+    .main .banner img {
+      width: 95%;
+    }
+    .main .banner .content{
+      width: 100%;
+    }
+    .main .banner img {
+      height: 90%;
+      margin-top: 30px;
+    }
+    .main .banner div h1 {
+      font-size: 60px;
+    }
+    .main .banner p {
+      line-height: 22px;
+    }
+
+    /*  */
+    .projects ul li{
+     
+      /* max-width: 250px; */
+      height: 300px;
+      
+    } 
+  }
+
+ 
+ 
+   
+ 
+ 
