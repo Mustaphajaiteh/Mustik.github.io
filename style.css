@@ -13,10 +13,12 @@ body{
 section{
     background-color: white;
     width: 100%;
-    height: 780px;
+    height: 100%;
+    overflow: hidden;
     font-family: 'Lucida Sans';
     margin: 20px auto;
     position: relative;
+    transition: 0.3s;
     border-radius: 14px;
 }
 input{
@@ -33,6 +35,66 @@ nav{
     transition: 0.3s ease in-out;
     position: absolute;
 }
+label .fa-solid {
+  /* display: none; */
+  /* width: 0px; */
+  opacity: 0;
+  transition: 0.5s;
+}
+input.checkbox-theme:checked ~ label .fa-solid {
+  /* display: block; */
+  opacity: 1;
+  transition: 0.5s;
+}
+input.checkbox-theme:checked ~ label .fa-regular {
+  /* display: none; */
+  opacity: 0;
+  transition: 0.5s;
+}
+input.checkbox-theme:checked ~ section {
+  /* display: none; */
+  background-color: #2f2e41;
+  background-color: #111927;
+
+  transition: 0.3s;
+  color: whitesmoke;
+}
+input.checkbox-theme:checked ~ section h1 {
+  /* display: none; */
+  color: #fff;
+}
+input.checkbox-theme:checked ~ section h3 {
+  /* display: none; */
+  color: #00bfa6;
+}
+input.checkbox-theme:checked ~ section p {
+  /* display: none; */
+  color: gainsboro;
+}
+
+label .fa-moon {
+  font-size: 20px;
+  width: 25px;
+}
+
+.toggle-theme {
+  cursor: pointer;
+  position: relative;
+}
+.toggle-theme i {
+  top: 4px;
+  position: absolute;
+}
+.toggle-nav {
+  position: absolute;
+  left: 6%;
+  top: 8px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+label .fa-times {
+  display: none;
+}
 
 ul{
     width: 100%;
@@ -41,29 +103,57 @@ ul{
 }
 ul li{
     list-style: none;
+    overflow: hidden;
 }
 nav ul li{
     height: 60px;
     line-height: 60px;
+    width: 100%;
+}
+nav ul {
+  padding: 10px;
 }
 li a{
     text-decoration: none;
-    color: #ffffff;
+    color: #2f2e41;
+}
+nav li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+li a span {
+  font-size: 14px;
+  margin-left: 10px;
+  display: none;
 }
 main{
-    width: 95%;
+    width: 100%;
     height: 100%;
     padding: 10px 30px;
     float: right;
-    background-color: aqua;
+    background-color: #fff;
 }
 main header{
     display: flex;
     justify-content: flex-end;
+    align-items: center;
+    font-weight: bold;
+    width: 100%;
+    height: 60px;
+    border-bottom: 2px whitesmoke;  
 }
-main header a{
+ header a{
     padding: 0 5px;
-    margin: 0 5px;
+    margin: 0 10px;
+    text-decoration: none;
+    color: inherit;
+}
+header a.hire-btn-top {
+  background-color: #00bfa6;
+  color: #fff;
+  padding: 4px 6px;
+  border-radius: 5px;
 }
 .toggle-nav{
     position: absolute;
@@ -100,11 +190,14 @@ input.checkbox-nav:checked ~ label.toggle-nav{
   input.checkbox-nav:checked ~  nav ul li a span {
     display: inline-block;
  }
+ input.checkbox-nav:checked ~  nav ul li a i {
+  width: 25px;
+}
  /* div classes  */
  .main-content{
     width: 100%;
     height: 80%;
-    /* float: right; */
+    float: right; 
  }
  .main-content .banner{
      width: 98;
