@@ -395,24 +395,25 @@ input.checkbox-nav:checked ~ label.toggle-nav{
       left: 230px;
     }
 
-    .main .banner {
-      flex-wrap: wrap;
+    .main-content .banner {
+      flex-wrap: wrap-reverse;
+
     }
-    .main .banner div,
-    .main .banner img {
+    .main-content .banner div,
+    .main-content .banner img {
       width: 95%;
     }
-    .main .banner .content{
+    .main-content .banner .content{
       width: 100%;
     }
-    .main .banner img {
+    .main-content .banner img {
       height: 90%;
       margin-top: 30px;
     }
-    .main .banner div h1 {
+    .main-content .banner div h1 {
       font-size: 60px;
     }
-    .main .banner p {
+    .main-content .banner p {
       line-height: 22px;
     }
 
