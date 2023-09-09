@@ -406,6 +406,42 @@ input.checkbox-nav:checked ~ label.toggle-nav{
       z-index: 1;
       border-radius: 0;
     }
+    form{
+      position: absolute;
+      padding: 20px 5px; 
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    button{
+      color: #fff;
+      text-transform: capitalize;
+      letter-spacing: 2px;
+      padding: 10px 10px;
+      border-radius: 500px;
+      display: inline-block;
+      font-weight: 500;
+      transition: all 0.4s ease-in-out;
+      background-size: 152% 100%;
+      background: blue;
+      border: 2px solid white;
+    }
+    input{
+      border: 2px solid black;
+      border-radius: 8px;
+      width: 50%;
+      height: 28px;
+      padding: 10px;
+      margin: 7px;
+    }
+    input [type="checkbox"]{
+      display: none;
+  
+    }
     input.checkbox-nav:checked ~ main {
       width: 93%;
     }
