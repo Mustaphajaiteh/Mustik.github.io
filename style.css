@@ -236,8 +236,8 @@ input.checkbox-nav:checked ~ label.toggle-nav{
     float: right; 
  }
  .main-content .banner{
-     width: 98;
-     height: 90;
+     width: 98%;
+     height: 90%;
      margin-top: 40px;
      display: flex;
      flex-wrap: wrap-reverse;
@@ -246,10 +246,10 @@ input.checkbox-nav:checked ~ label.toggle-nav{
  }
  .main-content .banner .content,
  .main-content .banner img{
-    width: 50%;
+    width: 48%;
  }
  .main-content .banner img{
-    height: 90%;
+    height: 70%;
  }
  
  .main-content .banner div h1{
