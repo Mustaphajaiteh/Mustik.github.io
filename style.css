@@ -506,8 +506,8 @@ input.checkbox-nav:checked ~ label.toggle-nav{
     /*  */
     .projects ul li{
      
-      /* max-width: 250px; */
-      height: 350px;
+       max-width: 250px; 
+      height: 400px;
       
     } 
   }
