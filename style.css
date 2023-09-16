@@ -11,7 +11,7 @@ body{
 }
 
 section{
-    /* background-color: white; */
+   background-color: #def4ed; 
     width: 95%;
     /* height: 100%; */
     overflow: hidden;
@@ -255,15 +255,35 @@ input.checkbox-nav:checked ~ label.toggle-nav{
  .main-content .banner div h1{
     font-size: 80px;
  }
- .main-content .banner h3,
+ .main-content .banner h3{
+  padding: 2px 0px 2px 50px;
+  color: #0a0a0a;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    display: inline-block;
+    margin-bottom: 20px;
+    background: linear-gradient(
+      120deg,
+      #1c99fe 20.69%,
+      #7644ff 50.19%,
+      #fd4766 79.69%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+ }
  .main-content .banner div h1 {
     padding: 2px 0px 2px 50px;
     color: #333;
+  }
+  .main-content .banner div h1 span{
+    color: #fd4766;
   }
  .main-content .banner p{
     line-height: 27px;
     padding: 2px 0px 2px 50px;
     text-align: justify;
+    font-weight: 700;
  }
  .main-content > p{
     text-align: center;
