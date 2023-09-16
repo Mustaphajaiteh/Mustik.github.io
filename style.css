@@ -424,6 +424,7 @@ input.checkbox-nav:checked ~ label.toggle-nav{
   @media (max-width: 768px) {
     section {
       width: 100%;
+      height: 100%;
       margin: 0;
       border-radius: 0;
     }
@@ -506,7 +507,7 @@ input.checkbox-nav:checked ~ label.toggle-nav{
     .projects ul li{
      
       /* max-width: 250px; */
-      height: 300px;
+      height: 350px;
       
     } 
   }
